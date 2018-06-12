@@ -1,5 +1,3 @@
-import java.util.*
-
 fun neparne(x : Array<Int>){
 	for(i in x){
 		if(i%2 == 1){
