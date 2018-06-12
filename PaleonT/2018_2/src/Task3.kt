@@ -7,6 +7,6 @@ fun main(args: Array<String>) {
 	var jew =readLine()
 	while(0<a){
 		println(jew)
-		a++
+		a--
 	}
 }
