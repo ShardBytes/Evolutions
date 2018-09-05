@@ -1,8 +1,8 @@
 import processing.core.PApplet;
 
-public class ABB extends PApplet {
+public class utekaj extends PApplet {
 	public static void main(String[] args) {
-		PApplet.main("ABB");
+		PApplet.main("utekaj");
 	}
 	@Override
 	public void setup(){
@@ -14,17 +14,21 @@ public class ABB extends PApplet {
 		size(640, 420);
 
 	}
-
 	@Override
 	public void draw() {
 		if (mousePressed) {
 			if (mouseButton == LEFT) {
-				fill(51, 251, 83);
-				line(mouseX, mouseY, mouseX+random(-500,500),mouseY+random(-500,500));
+				clear();
+				fill(0, 0, 0);
+				background(255,255,255);
+				ellipse(mouseX,mouseY,30,30);
+				line(mouseX,mouseY,mouseX,mouseY+70);
+				line(mouseX-20,mouseY+30,mouseX+20,mouseY+30);
+
 
 			}
 		}
 	}
-
 }
+
 
