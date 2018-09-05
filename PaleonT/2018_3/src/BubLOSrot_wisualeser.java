@@ -20,12 +20,14 @@ public class BubLOSrot_wisualeser extends PApplet {
 	public void draw(){
 		clear();
 		background(255,255,255);
-		fill(0);
+
 		textFont(createFont("Comic Sans MS", 16));
 		for (int i = 0; i < Yes.length; i++) {
 			int Devat = Yes[i];
+			fill(255/(Devat+random(0,5)),255/(i+random(0,5))*5,255/(i+random(0,5)*8));
 			text(Devat, width/Yes.length*i, 25);
 			rect(width/Yes.length*i,height,25, -(Devat*(height - 45)/getHighest(Yes)));
+
 		}
 
 
