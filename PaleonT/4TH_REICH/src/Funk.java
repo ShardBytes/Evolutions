@@ -1,4 +1,8 @@
+import net.objecthunter.exp4j.Expression;
+import net.objecthunter.exp4j.ExpressionBuilder;
 import processing.core.PApplet;
+
+import javax.swing.*;
 
 public class Funk extends PApplet {
 	public static void main(String[] args) {
@@ -6,20 +10,13 @@ public class Funk extends PApplet {
 	}
 	@Override
 	public void setup(){
-		frameRate(23f);
-	}
-	@Override
-	public void settings() {
-		size(1366,768);
-	}
-	@Override
-	public void draw() {
 		clear();
 		background(200);
 		fill(0, 0, 0);
 		strokeWeight(3f);
 		stroke(0);
 		translate(width / 2, height / 2);
+
 		//čary a čisla(I guess)
 		line(0 - (width / 2), 0, width, 0);
 		line(0, 0 - (height / 2), 0, height);
@@ -31,16 +28,24 @@ public class Funk extends PApplet {
 			text(i,(i*30)+2,12);
 			text(i == 0 ? "" : String.valueOf(-i),2,i*30-2);
 		}
+
+		String funkcia = JOptionPane.showInputDialog(null, "y = ");
+		Expression graf = new ExpressionBuilder(funkcia).variable("x").build();
+
 		//Funkcie zborazuje
 		for (float x = -25; x < 25; x += 0.001){
 			strokeWeight(0.5f);
 			stroke(255,0,0);
-			float y = (x+5)*3 ;
+			graf.setVariable("x",x);
+			float y = (float)graf.evaluate();
 			ellipse(x*30, -y*30,1 ,1);
 		}
 
-
-
 	}
+	@Override
+	public void settings() {
+		size(1366,768);
+	}
+
 }
 
