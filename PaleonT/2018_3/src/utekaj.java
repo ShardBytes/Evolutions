@@ -6,7 +6,7 @@ public class utekaj extends PApplet {
 	}
 	@Override
 	public void setup(){
-		frameRate(60f);
+		frameRate(30f);
 	}
 
 	@Override
@@ -23,7 +23,16 @@ public class utekaj extends PApplet {
 				background(255,255,255);
 				ellipse(mouseX,mouseY,30,30);
 				line(mouseX,mouseY,mouseX,mouseY+70);
-				line(mouseX-20,mouseY+30,mouseX+20,mouseY+30);
+				for (int i = 0; i <2; i++){
+					fill(0,0,0);
+					strokeWeight(3f);
+					float a = random(-50,50);
+					float b = random(100,120);
+					float c = random(-10,40);
+					float d = random(-30,30);
+					line(mouseX,mouseY+70,mouseX+a,mouseY+b);
+					line(mouseX,mouseY+30,mouseX+d,mouseY+c);
+				}
 
 
 			}
