@@ -20,10 +20,11 @@ public class ABB extends PApplet {
 		if (mousePressed) {
 			if (mouseButton == LEFT) {
 				fill(51, 251, 83);
-				line(mouseX, mouseY, mouseX+random(-500,500),mouseY+random(-100,100));
+				line(mouseX, mouseY, mouseX+random(-500,500),mouseY+random(-500,500));
 
 			}
 		}
 	}
 
 }
+
