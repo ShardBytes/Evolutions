@@ -7,3 +7,4 @@ out/
 # GRADLE
 build/
 .gradle
+*.class
