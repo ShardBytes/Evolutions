@@ -1,19 +1,29 @@
 import java.util.Scanner;
 
 public class MinkoLearning {
-	
 	public static void main(String[] args) {
-		String meno = "minko";
-		String priezvisko = "dina";
+		Scanner vstupč = new Scanner(System.in);
 		
-		System.out.println("My name is "+ meno + " " + priezvisko);
-		
-		Scanner vstup = new Scanner(System.in);
-		System.out.println("Ahoj, ako sa máš ?");
-		System.out.println("Som rád že sa máš : " + vstup.nextLine());
+		System.out.println("Zadaj 3 - 1 čísla XD");
 		
 		
+		int x = vstupč.nextInt();
+		int y = vstupč.nextInt();
 		
+		
+		Scanner vstupm = new Scanner(System.in);
+		System.out.println("Zadaj meno a priezvisko");
+		String meno = vstupm.nextLine();
+		
+		
+		System.out.println(meno+" "+"tvoje IQ je: "+ (x/y));
+		if(x/y > 150) {
+			System.out.println("Congratulation u r genius.");
+		}else if(x/y > 100){
+			System.out.println("Congrat u are not stupid.");
+		}else{
+			System.out.println(meno+" go for Slovak rap.");
+		}
 	}
 	
 }
