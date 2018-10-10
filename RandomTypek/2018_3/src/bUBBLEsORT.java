@@ -1,6 +1,7 @@
 import processing.core.PApplet;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class bUBBLEsORT extends PApplet {
 
@@ -8,46 +9,47 @@ public class bUBBLEsORT extends PApplet {
 	private int[] arai = {125,45,7,42,14,58,89,6,31,40,8};
 	private String[] fonts = {"Arial", "Comic Sans MS", "Impact", "Times New Roman"};
 
-	private int stuff = 0;
-
 	public class Tycka {
-		private Vector2D pos;
-		private int value;
+		private Tween value;
+		private int pos;
 
-		public Tycka(int value){
-			this.pos = new Vector2D();
-			this.value = value;
-
-		}
-
-		public Vector2D getPos() {
-			return pos;
-		}
-
-		public void setPos(Vector2D pos) {
-			this.pos = pos;
-		}
-
-		public void setPos(int x, int y){
-			this.pos = new Vector2D(x,y);
+		public Tycka(double val){
+			value = new Tween(val,0.1d,true,true);
 		}
 
 		public void setPos(int x){
-			this.pos = new Vector2D(x,0);
+			pos = x;
 		}
 
 		public int getValue() {
-			return value;
+			return value.getInt();
 		}
 
-		public void setValue(int value) {
-			this.value = value;
+		public void setValue(int val) {
+			value.setTarget(val);
+			//this.value.setValue(val);
 		}
 
 		public void drawTycka() {
-			text(value, pos.x, 20);
-			rect(pos.x, height, 10, -value*5);
+			value.step(1.0f);
 
+			text(value.getInt(), pos, 20);
+			rect(pos, height, 10, -value.getInt()*5);
+
+		}
+
+		@Override
+		public boolean equals(Object o) {
+			if (this == o) return true;
+			if (o == null || getClass() != o.getClass()) return false;
+			Tycka tycka = (Tycka) o;
+			return pos == tycka.pos &&
+					Objects.equals(value, tycka.value);
+		}
+
+		@Override
+		public int hashCode() {
+			return Objects.hash(value, pos);
 		}
 
 	}
@@ -65,9 +67,11 @@ public class bUBBLEsORT extends PApplet {
 	public void settings() {
 		size(1280,720);
 		for(int value: arai) {
-			tycky.add(new Tycka(value));
+			Tycka tycka = new Tycka(value);
+			tycky.add(tycka);
+			int partSize = width / arai.length;
+			tycka.setPos(partSize * tycky.indexOf(tycka));
 		}
-		System.out.println("tycky.size() = " + tycky.size());
 
 	}
 
@@ -78,13 +82,9 @@ public class bUBBLEsORT extends PApplet {
 		fill(0);
 		//textFont(createFont(fonts[Math.round(random(0,fonts.length-1))],30));
 
-		stuff++;
-
 		tycky.forEach(tycka -> {
-			tycka.setPos(stuff);
+			tycka.setValue(arai[tycky.indexOf(tycka)]);
 			tycka.drawTycka();
-			System.out.println(tycka.getPos());
-			System.out.println(tycka.getValue());
 		});
 
 	}
@@ -92,8 +92,8 @@ public class bUBBLEsORT extends PApplet {
 	@Override
 	public void mousePressed() {
 		text("clicc",mouseX,mouseY);
-		int n = arai.length;
-		int temp = 0;
+		int n = tycky.size();
+		int temp;
 		for(int j=1; j < n; j++){
 			if(arai[j-1] > arai[j]){
 				//swap elements
@@ -101,7 +101,9 @@ public class bUBBLEsORT extends PApplet {
 				arai[j-1] = arai[j];
 				arai[j] = temp;
 			}
+
 		}
+
 	}
 
 }
