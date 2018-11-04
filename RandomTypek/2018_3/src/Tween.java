@@ -1,3 +1,8 @@
+/*
+ * Copyright Plajdo, 2018
+ * Source code taken with permission from https://github.com/ShardBytes/ALightInTheJava/blob/master/core/src/io/github/shardbytes/alightinthevoid/internal/Tween.java
+ */
+
 /**
  * Value interpolation class.
  */
