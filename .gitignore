@@ -8,3 +8,6 @@ out/
 build/
 .gradle
 *.class
+
+#MINKOVE JAR ARTEFAKTY
+MinkoTryhard/production/
