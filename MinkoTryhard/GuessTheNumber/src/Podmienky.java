@@ -8,10 +8,18 @@ public class Podmienky{
 		System.out.println("Hello, this is a number guesing game.");
 		System.out.println("It is simple just write the number and I will tell u if my number is lower or higher");
 		System.out.println("Good luck and Have fun");
-		
-		int x =new Random().nextInt(101);
-		
 		Scanner vstup = new Scanner(System.in);
+		
+		System.out.println("Set range of numbers in which you want to guess.");
+		int prve = vstup.nextInt();
+		int druhe = vstup.nextInt();
+		
+		
+		Random ran = new Random();
+		
+		int x = ran.nextInt(prve + druhe);
+		
+		System.out.println("Now you can try to guess the number.");
 		
 		
 		int cislo = vstup.nextInt();
