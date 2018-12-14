@@ -25,11 +25,5 @@ if ctip == cislo:
 #else
 #else if = elif
 
-
-
-
-
-
-
 #else
  #statement(s)
