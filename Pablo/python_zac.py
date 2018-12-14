@@ -11,3 +11,5 @@ print("volam sa {} a mam {} rokov".format(meno, cvek))
 
 if cvek < 10:
     print("kys mas malo rokov")
+
+#test
