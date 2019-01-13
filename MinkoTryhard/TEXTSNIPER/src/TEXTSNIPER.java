@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class TEXTSNIPER{
 	
@@ -6,13 +7,15 @@ public class TEXTSNIPER{
 	public static void main(String[] args){
 		
 		ArrayList<Obet> list = new ArrayList<>();
-		Obet fero = new Obet();
-		Obet palko = new Obet();
-		Obet jaro = new Obet();
+		System.out.println("Vitajte toto je vasa nova cinema v Mozambiku zvolte si pocet obeti. Vela stastia agente WC 40. MUHAHAHAHA ");
 		
-		list.add(fero);
-		list.add(palko);
-		list.add(jaro);
+		Scanner scanner = new Scanner(System.in);
+		
+		int pocetfukinobetiktorechcemzabitvtomtokolezamenejnezhodinumojhodrahocennehocasunatejtokrasnejplanenazvanejzem = scanner.nextInt();
+		
+		for(int p=0; p < pocetfukinobetiktorechcemzabitvtomtokolezamenejnezhodinumojhodrahocennehocasunatejtokrasnejplanenazvanejzem; p++ ){
+			list.add(new Obet());
+		}
 		
 		Sniper sniper = new Sniper();
 		
@@ -29,16 +32,46 @@ public class TEXTSNIPER{
 			sniper.tick();
 			System.out.println("PUUUF");
 			
-			for(Obet obet : list){
-				if (sniper.shot == obet.pozicia) {
+			int kill = 0;
+			
+			for(int i = 0; i < list.size(); i++){
+				Obet obet = list.get(i);
+				if(sniper.shot == obet.pozicia){
 					list.remove(obet);
+					kill++;
+				}
+				
+			}
+			
+			switch(kill){
+				case 1:{
+					System.out.println("Priamo do neg... ehmmm cierneho :!)");
+				}
+				case 2:{
+					System.out.println("Double buble kill");
+				}
+				case 3:{
+					System.out.println("OU BABY ITS TRIPLE");
+				}
+				case 4:{
+					System.out.println("QUADRE MATHRE KILLORE");
+				}
+				case 5:{
+					System.out.println("PENTAAAA PENTAAA O MY GOD ITS PENTAAAAAAAAAA");
+				}
+				case 0:{
+					System.out.println("HAA VEEDLA");
+				}
+				default:{
+					System.out.println("CHEATER");
 				}
 			}
+			
 			if(list.isEmpty()){
 				break;
 			}
 			
-			System.out.println("HAAA VEDLA");
+			
 			for(Obet obet : list){
 				System.out.println("Terč utiekol na poziciu: " + obet.pozicia + ", snazte sa, nesmie utiect.");
 				
