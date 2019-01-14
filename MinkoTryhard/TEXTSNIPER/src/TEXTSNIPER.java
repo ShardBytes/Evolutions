@@ -7,9 +7,14 @@ public class TEXTSNIPER{
 	public static void main(String[] args){
 		
 		ArrayList<Obet> list = new ArrayList<>();
-		System.out.println("Vitajte toto je vasa nova cinema v Mozambiku zvolte si pocet obeti. Vela stastia agente WC 40. MUHAHAHAHA ");
+		System.out.println("Vitajte toto je vasa nova cinema v Mozambiku. MUHAHAHAHA ");
+		System.out.println("Vasa ulohou predvidat kde sa bude obet nachadzat. Vystrelite na poziciu ktorej suradnicu zadate.");
+		System.out.println("Zvolte si pocet obeti. Muhahahah.");
+		System.out.println("Vela stastia Agente WC-40");
 		
 		Scanner scanner = new Scanner(System.in);
+		
+		
 		
 		int pocetfukinobetiktorechcemzabitvtomtokolezamenejnezhodinumojhodrahocennehocasunatejtokrasnejplanenazvanejzem = scanner.nextInt();
 		
@@ -46,26 +51,35 @@ public class TEXTSNIPER{
 			switch(kill){
 				case 1:{
 					System.out.println("Priamo do neg... ehmmm cierneho :!)");
+					break;
 				}
 				case 2:{
 					System.out.println("Double buble kill");
 				}
+					break;
 				case 3:{
 					System.out.println("OU BABY ITS TRIPLE");
 				}
+					break;
 				case 4:{
 					System.out.println("QUADRE MATHRE KILLORE");
 				}
+					break;
 				case 5:{
 					System.out.println("PENTAAAA PENTAAA O MY GOD ITS PENTAAAAAAAAAA");
 				}
+					break;
 				case 0:{
 					System.out.println("HAA VEEDLA");
 				}
+					break;
 				default:{
 					System.out.println("CHEATER");
 				}
+					break;
+				
 			}
+			
 			
 			if(list.isEmpty()){
 				break;
