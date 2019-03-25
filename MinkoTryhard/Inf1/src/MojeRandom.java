@@ -1,25 +1,31 @@
 import processing.core.PApplet;
+import java.util.Random;
 
-public class KockaRot extends PApplet {
+public class Snehuliak extends PApplet{
+	
+	
+	
 	
 	public static void main(String[] args) {
-		PApplet.main("KockaRot");
+		PApplet.main("Snehuliak");
 	}
 	
 	public void settings() {
-		size(320, 240);
+		size(320 ,480);
 	}
 	
 	@Override
 	public void setup() {
 	
-		
-	}
 	
-	@Override
-	public void draw() {
-		clear();
-		rect();
-		
-	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
