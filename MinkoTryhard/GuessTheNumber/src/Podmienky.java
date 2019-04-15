@@ -17,7 +17,7 @@ public class Podmienky{
 		
 		Random ran = new Random();
 		
-		int x = ran.nextInt(prve + druhe);
+		int x = ran.nextInt(prve + druhe)
 		
 		System.out.println("Now you can try to guess the number.");
 		

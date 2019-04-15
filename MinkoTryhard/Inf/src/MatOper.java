@@ -19,20 +19,20 @@ public class MatOper extends PApplet{
 	public void setup() {
 		
 		
-		int cervena;
-		(cervena) = color(255,0,0);
-		int zelena;
-		(zelena) = color(0,255,0);
-		int modra;
-		(modra) = color(0,0,255);
+		int cervena = color(255,0,0);
+		int zelena = color(0,255,0);
+		int modra = color(0,0,255);
 		
-	
-	
-	
-	rect(100,100,100,100);
-	
-	
-	
-	
+		int[] farby = {cervena, zelena, modra};
+		
+		int randomIndex = random.nextInt(farby.length);
+		
+		
+		fill(farby[randomIndex]);
+		rect(100,100,100,100);
+		
+		
+		
+		
 	}
-	}
+}
