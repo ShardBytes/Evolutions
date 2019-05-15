@@ -1,0 +1,6 @@
+for kontrola in range(0, preteky.pocet_kontrol):
+        for pretekar in range(0, preteky.pocet_pretekarov):
+            # odfiltruj data pre daneho pretekara
+            t = list(filter(lambda x: x[0] == kontrola and x[1] == pretekar, z))
+            t.sort(key=lambda x: x[2]) # sort podla casu
+            print(t)
