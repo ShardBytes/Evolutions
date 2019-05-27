@@ -25,7 +25,7 @@ public class Nasobilka extends PApplet {
 		for(int i = 1; i<11; i++) {
 			for (int t = 1; t < 11; t++) {
 				
-				text(i * t , x * 2, y * 2);
+				text(i * t , x * 2  , y * 2  );
 				x += 10;
 			}
 			x = 10;
