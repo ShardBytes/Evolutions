@@ -35,7 +35,7 @@ public class Wooow extends PApplet {
 	
 	@Override
 	public void setup(){
-	
+		background(255);
 	
 	}
 	
@@ -49,6 +49,8 @@ public class Wooow extends PApplet {
 	public void draw() {
 		frameRate(5);
 		operacia ++;
+		
+		
 		
 		if(operacia < 8){
 			kocka(xPoz,yPoz,staryUhol);
@@ -102,6 +104,10 @@ public class Wooow extends PApplet {
 			kocka(xPoz,yPoz-60,staryUhol);
 			staryUhol += 90;
 			
+		}else if (operacia >68){
+			clear();
+			background(255);
+			operacia = 0;
 		}
 		
 		
