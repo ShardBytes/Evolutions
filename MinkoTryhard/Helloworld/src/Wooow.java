@@ -39,24 +39,72 @@ public class Wooow extends PApplet {
 	
 	}
 	
-	int xStaraPoz = 300;
-	int yStaraPoz = 300;
-	int xNovaPoz = 0;
-	int yNovaPoz = 0;
+	int xPoz = 300;
+	int yPoz = 300;
 	int staryUhol = 0;
-	int novyUhol = 0;
+	int operacia = 0;
 	
 	
 	@Override
 	public void draw() {
-		frameRate(2);
-		//for(int j = 0; j<1000; j++){
-			for(int i = 0; i < 5; i++){
-				kocka(xStaraPoz, yStaraPoz, staryUhol);
-				staryUhol += 45;
-			}
+		frameRate(5);
+		operacia ++;
+		
+		if(operacia < 8){
+			kocka(xPoz,yPoz,staryUhol);
+			staryUhol +=45;
 			
-		//}
+		}else if (operacia > 8 && operacia < 13){
+			kocka(xPoz+20,yPoz,staryUhol);
+			staryUhol += 90;
+			
+		}else if (operacia > 13 && operacia < 18){
+			kocka(xPoz,yPoz+20,staryUhol);
+			staryUhol += 90;
+			
+		}else if (operacia > 18 && operacia < 23){
+			kocka(xPoz-20,yPoz,staryUhol);
+			staryUhol += 90;
+			
+		}else if (operacia > 23 && operacia < 28){
+			kocka(xPoz,yPoz-20,staryUhol);
+			staryUhol += 90;
+			
+		}else if (operacia > 28 && operacia < 33){
+			kocka(xPoz+40,yPoz,staryUhol);
+			staryUhol += 90;
+			
+		}else if (operacia > 33 && operacia < 38){
+			kocka(xPoz,yPoz+40,staryUhol);
+			staryUhol += 90;
+			
+		}else if (operacia > 38 && operacia < 43){
+			kocka(xPoz-40,yPoz,staryUhol);
+			staryUhol += 90;
+			
+		}else if (operacia > 43 && operacia < 48){
+			kocka(xPoz,yPoz-40,staryUhol);
+			staryUhol += 90;
+			
+		}else if (operacia > 48 && operacia < 53){
+			kocka(xPoz+60,yPoz,staryUhol);
+			staryUhol += 90;
+			
+		}else if (operacia > 53 && operacia < 58){
+			kocka(xPoz,yPoz+60,staryUhol);
+			staryUhol += 90;
+			
+		}else if (operacia > 58 && operacia < 63){
+			kocka(xPoz-60,yPoz,staryUhol);
+			staryUhol += 90;
+			
+		}else if (operacia > 63 && operacia < 68){
+			kocka(xPoz,yPoz-60,staryUhol);
+			staryUhol += 90;
+			
+		}
+		
+		
 	}
 	
 	
