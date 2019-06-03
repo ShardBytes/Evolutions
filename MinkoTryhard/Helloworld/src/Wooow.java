@@ -36,6 +36,7 @@ public class Wooow extends PApplet {
 	@Override
 	public void setup(){
 		background(255);
+		frameRate(10);
 	
 	}
 	
@@ -47,7 +48,7 @@ public class Wooow extends PApplet {
 	
 	@Override
 	public void draw() {
-		frameRate(5);
+		
 		operacia ++;
 		
 		

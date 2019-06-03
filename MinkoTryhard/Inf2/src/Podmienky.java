@@ -18,7 +18,7 @@ public class Podmienky extends PApplet {
 	int y = 10;
 	
 	@Override
-	public void setup()
+	public void setup(){
 	
 	}
 	
