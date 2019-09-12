@@ -1,4 +1,7 @@
-meno = input("Meno:" )
+a = 0
+n = int(input("n = "))
 
-for i in range(10):
-    print(meno)
+for i in range(n):
+    a = a + i
+    print(a)
+
