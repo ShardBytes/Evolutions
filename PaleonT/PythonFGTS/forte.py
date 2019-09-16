@@ -1,4 +1,10 @@
-strana_a = float(input("Strana a: "))
-strana_b = float(input("strana b: "))
+"""sucet parnych cisel po zadane cislo"""
+a = 0
+n = int(input("n = "))+1
 
-print(f"Obsah štvruholnik je {strana_a*strana_b} a jeho obvod je {2*strana_a+strana_b}")
+for i in range(n):
+    if i%2 == 1:
+       continue 
+    a = a + i
+    
+print(f"sucet parnych cisel po  {n-1} je {a}")
