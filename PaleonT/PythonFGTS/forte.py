@@ -2,9 +2,6 @@
 a = 0
 n = int(input("n = "))+1
 
-for i in range(n):
-    if i%2 == 1:
-       continue 
-    a = a + i
-    
-print(f"sucet parnych cisel po  {n-1} je {a}")
+for i in range(n-1,0,-1):
+    #a = a + i
+    print(i, end=", ")
