@@ -1,8 +1,12 @@
 import processing.core.PApplet;
 
+import java.util.Random;
+
 public class Grid extends PApplet {
 
-	private int[][] tabulka = genTbael();
+	Random rand = new Random();
+
+	private int[][] tabulka = new int[10][10];
 
 	public static void main(String[] args) {
 		PApplet.main("Grid");
@@ -10,7 +14,8 @@ public class Grid extends PApplet {
 
 	@Override
 	public void setup() {
-		frameRate(30f);
+		frameRate(60f);
+		genTbael();
 	}
 
 	@Override
@@ -30,9 +35,9 @@ public class Grid extends PApplet {
 		numeros();
 
 
-
 	}
-	private void tabelRumpelstiltschen(){
+
+	private void tabelRumpelstiltschen() {
 		noFill();
 		stroke(0);
 		strokeWeight(3f);
@@ -56,23 +61,25 @@ public class Grid extends PApplet {
 
 		}
 	}
-	private int[][] genTbael(){
-		for (int i = 1; i<=9;i++){
-			for (int g = 1; g<=9;g++){
 
+	private int[][] genTbael() {
+		for (int i = 1; i <= 9; i++) {
+			for (int g = 1; g <= 9; g++) {
+				tabulka[i][g] = rand.nextInt(10);
 			}
 
-	}
+
+		}
+		return tabulka;
 	}
 
 
-	private void numeros(){
+	private void numeros() {
 		fill(0);
-		textAlign(PApplet.CENTER,PApplet.CENTER);
-		for (int i = 1; i<=9;i++){
-			for (int g = 1; g<=9;g++){
-				text(tabulka[g][i], i*71-35, g*71-35);
-
+		textAlign(PApplet.CENTER, PApplet.CENTER);
+		for (int i = 1; i <= 9; i++) {
+			for (int g = 1; g <= 9; g++) {
+				text(tabulka[g][i], i * 71 - 35, g * 71 - 35);
 
 
 			}
