@@ -1,0 +1,8 @@
+string = zlozeny zos char
+list = zoznam postupnosť hodnout roznych typov
+tuple = n-tice
+sets - monziny
+dictionary - slovnik
+
+
+string vieme priradit do premenej(jeden znak je tiez string(neexistuje char))
