@@ -1,8 +1,6 @@
-a = {"a","e", "i", "o", "u", "ä", "á", "é", "í", "ó", "ú"}
-x = input()
+s = "12. 6. 1998, Nigero Stando"
 
-for i in x:
-    if i in a:
-        print(i)
-    else:
-        break
+date = int(s[7:11])
+name = s[12:]
+
+print(f"{name} má v roku 2019 {2019-date} rokov")
