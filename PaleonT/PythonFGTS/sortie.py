@@ -26,7 +26,7 @@ def bublosrot(tabel):
                     tabel[i] = oi2
                     tabel[i+1] = oi1
                     print (tabel)
-                pocetvymen+=vymena
+                
             
             if vymena == 0:
                 
