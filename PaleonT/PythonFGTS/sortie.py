@@ -5,13 +5,12 @@ import random
 
 
 oi = [random.randint(0,800)]
-for i in range(1,100000):
+for i in range(1,10):
     oi.append(random.randint(0,800))
 
 def bublosrot(tabel):
     e = True
     vymena = 0
-    pocetvymen = 0
     while e:
         for i in range (0,len(tabel)):
             
@@ -32,7 +31,7 @@ def bublosrot(tabel):
                 
                 e = False
                 
-                break
+
         
 
 
