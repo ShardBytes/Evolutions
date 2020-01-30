@@ -1,35 +1,37 @@
 import random
 
-grid = [[],[],[],[],[],[],[],[],[],]
-
-while True :
-    r = random.randint(1,9)
-    if r not in grid[0]:
-        grid[0].append(r)
-    if len(grid[0]) == 9:
-        break
-
-print(grid[0])
-
-def check(nemero,index):
+def check(numero,index,indexC,grid):
     IsAlone = True
     counter = 0
-    for i in range(0,8):
-        if grid[i][index] == nemero:
-            couter+=1
-        if nemero in grid[i]:
+
+    if numero in indexC:
+        counter += 1
+    
+    for i in range (1,9):
+        if grid[i][index] == numero:
             counter+=1
-        else:
+        else :
             continue
+    
     if counter>0:
         IsAlone = False
 
     return IsAlone
 
-while True :
-    r = random.randint(1,9)
-    for i in range(8):
-        if check(r,i):
-            grid[0].append(r)
-        if len(grid[0]) == 9:
+
+grid = [[],[],[],[],[],[],[],[],[],]
+for o in range(0,9):  
+    
+    while True :
+        r = random.randint(1,9)
+        if check(r,len(grid[o]),grid[o],grid):
+            grid[o].append(r)
+        if len(grid[o]) == 9:
             break
+
+
+for i in grid:
+    print(i)
+
+
+
