@@ -1,10 +1,7 @@
-s1 = open("KysNAnanas.txt", "r")
+s1 = open("KysNAnanas.txt", "w")
+for i in range(100):
 
-oi = s1.read().split(" ")
+    s1.write("oof")
+    s1.write("ananas")
+s1.close()
 
-for i in oi:
-    
-    if i == "." or "," or "!" or "?":
-        print("")
-    else:
-        print(i)
