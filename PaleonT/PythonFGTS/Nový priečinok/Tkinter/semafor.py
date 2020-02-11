@@ -18,22 +18,22 @@ while True:
         if i == 10:
             kruhs_stred(150,160,"black")
             kruhs_stred(150,60,"red")
-            #canvas.after(i*100)
+            canvas.after(i*100)
             canvas.update()  
         elif i == 6:
             kruhs_stred(150,160,"orange")
-            #canvas.after(i*500)
+            canvas.after(i*500)
             canvas.update()  
         elif i == 11:
             kruhs_stred(150,60,"black")
             kruhs_stred(150,160,"black")
             kruhs_stred(150,260,"green")
-            #canvas.after(i*100)  
+            canvas.after(i*100)  
             canvas.update()  
         else:
             kruhs_stred(150,260,"black")
             kruhs_stred(150,160,"orange")
-            #canvas.after(i*500)  
+            canvas.after(i*500)  
             canvas.update()  
 
 
