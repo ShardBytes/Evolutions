@@ -1,5 +1,4 @@
 
-
 Uloha
 Napíšte program, ktorý vypočíta súčin, celočíselný podiel a zvyšok pri delení dvoch náhodne vygenerovaných prirodzených čísel bez použitia operácií *, div a mod.
 
@@ -40,7 +39,9 @@ Uloha
 Nech N je prirodzené číslo z intervalu <1,65500>.  Napíšte program, ktorý vypíše cifry prislúchajúce číslu N po prevode do dvojkovej sústavy.
 
 Uloha
-Syn dostával od otca v roku 2008 pevné vreckové N eur každý týždeň. Od januára 2009 mu otec zvyšuje vreckové každý týždeň o 0,2€. Napíšte program, ktorý vypíše postupne koľko otec vyplatí synovi na vreckovom každý týždeň počas roka a koľko spolu za celý rok. Výdavky vypíše program na obrazovku a do textového súboru po 5 týždňoch do jedného riadka.
+Syn dostával od otca v roku 2008 pevné vreckové N eur každý týždeň. Od januára 2009 mu otec zvyšuje vreckové každý týždeň o 0,2€.
+Napíšte program, ktorý vypíše postupne koľko otec vyplatí synovi na vreckovom každý týždeň počas roka a koľko spolu za celý rok. 
+Výdavky vypíše program na obrazovku a do textového súboru po 5 týždňoch do jedného riadka.
 
 Uloha
 Napíšte program, ktorý zašifruje užívateľom zadanú správu tak, že všetky písmená zmení na veľké a za každý znak pôvodnej správy sa vloží náhodne vygenerované veľké písmeno. Zašifrovanú správu vypíše.
