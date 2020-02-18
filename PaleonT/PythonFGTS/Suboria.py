@@ -1,10 +1,7 @@
-s1 = open("KysNAnanas.txt", "r")
+s1 = open("Ulohy.txt", "r")
+ulohy=""
+k = s1.readline()
 
-oi = s1.read().split(" ")
+print(k)
+s1.close()
 
-for i in oi:
-    
-    if i == "." or "," or "!" or "?":
-        print("")
-    else:
-        print(i)
