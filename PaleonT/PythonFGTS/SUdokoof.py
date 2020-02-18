@@ -1,37 +1,23 @@
 import random
 
-def check(numero,index,indexC,grid):
-    IsAlone = True
-    counter = 0
-
-    if numero in indexC:
-        counter += 1
-    
-    for i in range (1,9):
-        if grid[i][index] == numero:
-            counter+=1
-        else :
-            continue
-    
-    if counter>0:
-        IsAlone = False
-
-    return IsAlone
 
 
-grid = [[],[],[],[],[],[],[],[],[],]
+gridV = [[],[],[],[],[],[],[],[],[]]
+gridH = [[],[],[],[],[],[],[],[],[]]
+pp = 0
 for o in range(0,9):  
     
     while True :
         r = random.randint(1,9)
-        if check(r,len(grid[o]),grid[o],grid):
-            grid[o].append(r)
-        if len(grid[o]) == 9:
+        if r not in gridH[o] and r not in gridV[pp]:
+            gridH[o].append(r)
+            gridV[pp].append(r)
+            pp+=1
+        if len(gridH[o]) == 9:
+            pp = 0
             break
 
 
-for i in grid:
+for i in gridH:
     print(i)
-
-
 
