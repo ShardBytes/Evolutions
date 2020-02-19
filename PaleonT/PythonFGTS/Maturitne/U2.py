@@ -16,3 +16,5 @@ for o in s1:
             slovo = i
             
 
+print(dex,dlyka,slovo)
+
