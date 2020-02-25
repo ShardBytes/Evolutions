@@ -12,3 +12,6 @@ gateway: router kt sluzi ako bod do internetu alebo inej siete
 
 rcne nastavenie parametrou pre sietovu kartu
 dns server : server s tabulkami mien a adries
+
+sposoby pripohenia do internetu::aDSL - telefonne linky (asynchronne)
+                                :VDSL - 
