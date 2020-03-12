@@ -1,0 +1,9 @@
+raster body ktore farbime
+    
+do hlavicky sa uklada rozmer rostra
+
+komprimovane formaty - .jpg ,...
+    zmensenie pamatovej kapacirty priemerovanim farieb bodov
+
+sosovka snimac
+
